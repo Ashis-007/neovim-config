@@ -24,7 +24,7 @@ set cmdheight=1
 set foldmethod=indent   
 set nofoldenable
 set noshowmode
-set termguicolors
+" set termguicolors
 
 " for html/js/python files, 2 spaces
 autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2
