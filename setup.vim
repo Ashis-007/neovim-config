@@ -41,6 +41,9 @@ endif
 let g:rainbow_active = 1
 let mapleader = " "
 
+nnoremap <C-q> :q<CR>
+nnoremap <C-s> :w<CR>
+
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
