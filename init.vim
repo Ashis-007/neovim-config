@@ -18,6 +18,7 @@ source $HOME/.config/nvim/modules/blamer.vim
 source $HOME/.config/nvim/modules/nvim-treesitter.vim
 source $HOME/.config/nvim/modules/vim-devicons.vim
 source $HOME/.config/nvim/modules/comment.vim
+source $HOME/.config/nvim/modules/vim-sneak.vim
 source $HOME/.config/nvim/modules/lualine.vim
 source $HOME/.config/nvim/modules/nvim-tree.vim
 source $HOME/.config/nvim/modules/bufferline.vim
