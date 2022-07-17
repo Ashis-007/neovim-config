@@ -53,5 +53,8 @@ Plug 'nvim-lualine/lualine.nvim'
 " Plug 'itchyny/lightline.vim'
 " Plug 'josa42/vim-lightline-coc'
 
+" Bufferline
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

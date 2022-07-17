@@ -44,11 +44,21 @@ let mapleader = " "
 nnoremap <C-q> :q<CR>
 nnoremap <C-s> :w<CR>
 
+" Disable arrow keys
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
+
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
 inoremap jk <C-C>
+noremap  <C-l> :tabn<CR>
+noremap  <C-h> :tabp<CR>
+noremap  <C-n> :tabnew<CR>
+
 noremap  <C-l> :tabn<CR>
 noremap  <C-h> :tabp<CR>
 noremap  <C-n> :tabnew<CR>
