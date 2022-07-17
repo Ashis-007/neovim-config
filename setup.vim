@@ -39,47 +39,6 @@ if !has('gui_running')
 endif
 
 let g:rainbow_active = 1
-let mapleader = " "
-
-nnoremap <C-q> :q<CR>
-nnoremap <C-s> :w<CR>
-
-" Disable arrow keys
-" noremap <Up> <Nop>
-" noremap <Down> <Nop>
-" noremap <Left> <Nop>
-" noremap <Right> <Nop>
-
-map <leader>h :wincmd h<CR>
-map <leader>j :wincmd j<CR>
-map <leader>k :wincmd k<CR>
-map <leader>l :wincmd l<CR>
-inoremap jk <C-C>
-noremap  <C-l> :tabn<CR>
-noremap  <C-h> :tabp<CR>
-noremap  <C-n> :tabnew<CR>
-
-noremap  <C-l> :tabn<CR>
-noremap  <C-h> :tabp<CR>
-noremap  <C-n> :tabnew<CR>
-
-" To open vimrc in a new vertical split
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-" To source vimrc quickly
-nnoremap <leader>sv :source $MYVIMRC<cr>
-" To run Prettier
-nnoremap <leader>pp :Prettier<cr>
-
-" Window split shortcuts
-nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>- :split<CR>
-
-" Winteract Settings
-nmap <leader>rw :InteractiveWindow<CR>
-
-" Moving lines around in visual mode
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 
 " Remove trailing white spaces
 augroup removeTrailingSpace

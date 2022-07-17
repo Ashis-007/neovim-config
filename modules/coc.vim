@@ -26,31 +26,6 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:prettier#autoformat = 0
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
-" GoTo code navigation.
-" nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-" Remap for rename current word
-nmap <silent> <F2> <Plug>(coc-rename)
-" nmap <silent> gdn tabedit % | call CocActionAsync('jumpDefinition')<cr>
-" nmap <space>cla <Plug>(coc-codeaction-selected)
-nmap <space>cla <Plug>(coc-codeaction)
-" nmap <space>so :CocList symbols<cr>
-nmap <space>so :Vista<cr>
-nmap <space>cld :CocList diagnostics<cr>
-nmap <space>clc :CocList commands<cr>
-" nmap <space>le :CocCommand explorer<cr>
-nmap <space>cfc <Plug>(coc-fix-current)
-nmap <space>cfm <Plug>(coc-format)
-nmap <space>crf <Plug>(coc-refactor)
-nmap <space>cdi <Plug>(coc-diagnostic-info)
-nmap <space>cdn <Plug>(coc-diagnostic-next)
-nmap <space>cdp <Plug>(coc-diagnostic-prev)
-nmap <space>cfh <Plug>(coc-float-hide)
-nmap <space>cen <Plug>(coc-diagnostic-next-error)
-nmap <space>cep <Plug>(coc-diagnostic-prev-error)
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.

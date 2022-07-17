@@ -1,7 +1,3 @@
-nnoremap <silent> <C-l> :BufferLineCycleNext<CR>
-nnoremap <silent> <C-h> :BufferLineCyclePrev<CR>
-
-
 lua << EOF
 require("bufferline").setup{
     options = {

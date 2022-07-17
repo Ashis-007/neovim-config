@@ -1,19 +1,7 @@
-nnoremap <leader>nt :NvimTreeToggle<CR>
-nnoremap <leader>nr :NvimTreeRefresh<CR>
-nnoremap <leader>nf :NvimTreeFindFile<CR>
-" More available functions:
-" NvimTreeOpen
-" NvimTreeClose
-" NvimTreeFocus
-" NvimTreeFindFileToggle
-" NvimTreeResize
-" NvimTreeCollapse
-" NvimTreeCollapseKeepBuffers
-
 highlight NvimTreeFolderIcon guibg=blue
 
 " if only the tree is open and no other buffers are open, then quit
-autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree' . tabpagenr() | quit | endif
 
 lua << EOF
 
@@ -43,7 +31,7 @@ nvim_tree.setup {
     width = 30,
     height = 30,
     hide_root_folder = true,
-    side = "right",
+    side = "left",
     preserve_window_proportions = false,
     number = false,
     relativenumber = false,
@@ -60,7 +48,7 @@ nvim_tree.setup {
     indent_markers = {
       enable = true,
       icons = {
-        corner = "└ ",
+        corner = "└",
         edge = "│ ",
         none = "  ",
       },
@@ -95,7 +83,9 @@ nvim_tree.setup {
   },
   filters = {
     dotfiles = false,
-    custom = {},
+    custom = {
+        "node_modules"
+    },
     exclude = {},
   },
   git = {

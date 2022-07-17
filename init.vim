@@ -1,10 +1,16 @@
-source $HOME/.config/nvim/setup.vim " basic vim setup and keybindings
-source $HOME/.config/nvim/plugs/plugins.vim " all plugins
+" Basic vim setup
+source $HOME/.config/nvim/setup.vim 
 
-" THEMES
+" All plugins (vim-plug)
+source $HOME/.config/nvim/plugs/plugins.vim 
+
+" Keybindings
+source $HOME/.config/nvim/keybindings.vim 
+
+" Themes
 source $HOME/.config/nvim/themes/gruvbox.vim
 
-" PLUGINS
+" Plugins
 source $HOME/.config/nvim/modules/coc.vim 
 source $HOME/.config/nvim/modules/fzf.vim
 source $HOME/.config/nvim/modules/floaterm.vim
