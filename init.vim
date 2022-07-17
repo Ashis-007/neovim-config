@@ -21,4 +21,6 @@ source $HOME/.config/nvim/modules/comment.vim
 source $HOME/.config/nvim/modules/lualine.vim
 source $HOME/.config/nvim/modules/nvim-tree.vim
 source $HOME/.config/nvim/modules/bufferline.vim
+source $HOME/.config/nvim/modules/nvim-autopairs.vim
+source $HOME/.config/nvim/modules/nvim-surround.vim
 
