@@ -7,15 +7,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " THEMES
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
 
 Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/vim-gitbranch'
 Plug 'christoomey/vim-system-copy'
 
-" Plug 'frazrepo/vim-rainbow'
-" Plug 'luochen1990/rainbow'
 Plug 'junegunn/rainbow_parentheses.vim'
 
 Plug 'airblade/vim-gitgutter'
@@ -32,11 +31,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'voldikss/vim-floaterm'
 
-" NERDTree stuff
-" Plug 'preservim/NERDTree'
-" Plug 'ryanoasis/vim-devicons'
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 " nvim-tree
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
@@ -48,12 +42,10 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 " Search stuff
 Plug 'justinmk/vim-sneak'
 
-" Status line
+" Status line (Bottom)
 Plug 'nvim-lualine/lualine.nvim'
-" Plug 'itchyny/lightline.vim'
-" Plug 'josa42/vim-lightline-coc'
 
-" Bufferline
+" Bufferline (Top)
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 " List ends here. Plugins become visible to Vim after this call.
