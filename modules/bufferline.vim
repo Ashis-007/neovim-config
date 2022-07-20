@@ -16,14 +16,14 @@ require("bufferline").setup{
         right_trunc_marker = "",
         max_name_length = 30,
         max_prefix_length = 30,
-        tab_size = 21,
+        tab_size = 23,
         diagnostics = "coc",
         diagnostics_update_in_insert = true,
-        custom_filter = function (buf_number, buf_numbers)
-            if buf_numbers[1] ~= buf_number then
-                return true
-            end
-        end,
+        -- custom_filter = function (buf_number, buf_numbers)
+        --     if buf_numbers[1] ~= buf_number then
+        --         return true
+        --     end
+        -- end,
         offsets = { 
             { 
                 filetype = "NvimTree", 
@@ -50,7 +50,6 @@ require("bufferline").setup{
               guifg = { attribute = "fg", highlight = "TabLine" },
               guibg = { attribute = "bg", highlight = "TabLine" },
             },
-
             buffer_selected = {
               guifg = "#303030",
               guibg = "#82B679",
@@ -60,7 +59,6 @@ require("bufferline").setup{
               guifg = { attribute = "fg", highlight = "TabLine" },
               guibg = { attribute = "bg", highlight = "TabLine" },
             },
-
             close_button = {
               guifg = { attribute = "fg", highlight = "TabLine" },
               guibg = { attribute = "bg", highlight = "TabLine" },
@@ -75,8 +73,9 @@ require("bufferline").setup{
             --   },
 
             tab_selected = {
-              guifg = { attribute = "fg", highlight = "Normal" },
-              guibg = { attribute = "bg", highlight = "Normal" },
+              guifg = "#303030",
+              guibg = "#82B679",
+              gui = 'bold'
             },
             tab = {
               guifg = { attribute = "fg", highlight = "TabLine" },
@@ -87,7 +86,6 @@ require("bufferline").setup{
               guifg = { attribute = "fg", highlight = "TabLineSel" },
               guibg = { attribute = "bg", highlight = "Normal" },
             },
-
             duplicate_selected = {
               guifg = { attribute = "fg", highlight = "TabLineSel" },
               guibg = { attribute = "bg", highlight = "TabLineSel" },
@@ -103,7 +101,6 @@ require("bufferline").setup{
               guibg = { attribute = "bg", highlight = "TabLine" },
               gui = "italic",
             },
-
             modified = {
               guifg = { attribute = "fg", highlight = "TabLine" },
               guibg = { attribute = "bg", highlight = "TabLine" },

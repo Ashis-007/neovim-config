@@ -24,6 +24,8 @@ set cmdheight=1
 set foldmethod=indent   
 set nofoldenable
 set noshowmode
+set splitright
+set clipboard=unnamedplus
 " set termguicolors
 
 " for html/js/python files, 2 spaces
