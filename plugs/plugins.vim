@@ -49,5 +49,9 @@ Plug 'nvim-lualine/lualine.nvim'
 " Bufferline (Top)
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
