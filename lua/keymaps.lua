@@ -4,7 +4,7 @@ local opts = { noremap = true }
 keymap = vim.keymap.set
 
 -- Remap space as leader key
- vim.g.mapleader = " "
+vim.g.mapleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -70,3 +70,15 @@ keymap("n", "<leader>ff", "<cmd>Files <cr>")
 keymap("n", "<leader>fs", "<cmd>Rg <cr>")
 keymap("n", "<leader>fb", "<cmd>Buffers <cr>")
 
+-- FloatTerm
+keymap("n", "<F8>", ":FloatermNew<CR>")
+keymap("n", "<F9>", ":FloatermPrev<CR>")
+keymap("n", "<F10>", ":FloatermNext<CR>")
+keymap("n", "<F12>", ":FloatermToggle<CR>")
+keymap("n", "<leader>g", ":FloatermNew --height=0.9 --width=0.95 lazygit<CR>")
+vim.cmd [[
+    tnoremap <silent> <F8> <C-\><C-n>:FloatermNew<CR>
+    tnoremap <silent> <F9> <C-\><C-n>:FloatermPrev<CR>
+    tnoremap <silent> <F10> <C-\><C-n>:FloatermNext<CR>
+    tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
+]]
