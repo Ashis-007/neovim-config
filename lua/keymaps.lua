@@ -1,14 +1,10 @@
 local opts = { noremap = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 keymap = vim.keymap.set
 
 -- Remap space as leader key
-keymap("", "<Space>", "<Nop>")
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+ vim.g.mapleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -60,12 +56,8 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
--- Better terminal navigation
--- key_map("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- key_map("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- key_map("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- key_map("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- Remove search highlight until next search
+keymap("n", "<Esc><Esc>", ':let @/=""<CR>')
 
 -- nvim-tree
 keymap("n", "<leader>nt", ":NvimTreeToggle<CR>", opts)
@@ -74,17 +66,7 @@ keymap("n", "<leader>nf", ":NvimTreeFindFile<CR>", opts)
 keymap("n", "<leader>nn", ":NvimTreeFocus<CR>", opts)
 
 -- fzf
-keymap("n", "<leader>ff", "<cmd> Files <cr>")
-keymap("n", "<leader>fs", "<cmd> Rg <cr>")
-keymap("n", "<leader>fb", "<cmd> Buffers <cr>")
+keymap("n", "<leader>ff", "<cmd>Files <cr>")
+keymap("n", "<leader>fs", "<cmd>Rg <cr>")
+keymap("n", "<leader>fb", "<cmd>Buffers <cr>")
 
-vim.cmd([[
-    noremap  <leader>f :Files<CR>
-    noremap  <leader>fs :Rg<CR>
-    noremap  <leader>fb :Buffers<CR>
-
-    nnoremap <leader>nt :NvimTreeToggle<CR>
-    nnoremap <leader>nr :NvimTreeRefresh<CR>
-    nnoremap <leader>nf :NvimTreeFindFile<CR>
-    nnoremap <leader>nn :NvimTreeFocus<CR>
-]])

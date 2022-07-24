@@ -42,7 +42,7 @@ packer.init({
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return packer.startup(function(use)
+return packer.startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
