@@ -51,6 +51,7 @@ return packer.startup(function(use)
 
   -- Theme
   use("eddyekofo94/gruvbox-flat.nvim")
+  use 'navarasu/onedark.nvim'
 
   -- fzf - fuzzy finder
   use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
