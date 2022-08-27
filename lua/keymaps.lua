@@ -1,4 +1,4 @@
-local opts = { noremap = true }
+local opts = { noremap = true, silent = true }
 
 -- Shorten function name
 keymap = vim.keymap.set
@@ -32,8 +32,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<M-j>", "<Esc>:m .+1<CR>==gi", opts)
+keymap("n", "<M-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode
@@ -53,8 +53,8 @@ keymap("v", "p", '"_dP', opts)
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<M-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<M-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Remove search highlight until next search
 keymap("n", "<Esc><Esc>", ':let @/=""<CR>')
@@ -66,9 +66,9 @@ keymap("n", "<leader>nf", ":NvimTreeFindFile<CR>", opts)
 keymap("n", "<leader>nn", ":NvimTreeFocus<CR>", opts)
 
 -- fzf
-keymap("n", "<leader>ff", "<cmd>Files <cr>")
-keymap("n", "<leader>fs", "<cmd>Rg <cr>")
-keymap("n", "<leader>fb", "<cmd>Buffers <cr>")
+keymap("n", "<leader>ff", ":Files <cr>")
+keymap("n", "<leader>fs", ":Rg <cr>")
+keymap("n", "<leader>fb", ":Buffers <cr>")
 
 -- FloatTerm
 keymap("n", "<F8>", ":FloatermNew<CR>")
@@ -82,3 +82,7 @@ vim.cmd [[
     tnoremap <silent> <F10> <C-\><C-n>:FloatermNext<CR>
     tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<CR>
 ]]
+
+-- vim-illuminate
+keymap('n', '<A-n>', '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>')
+keymap('n', '<A-p>', '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>')

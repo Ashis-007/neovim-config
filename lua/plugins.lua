@@ -110,6 +110,12 @@ return packer.startup(function()
 	-- terminal inside nvim
 	use("voldikss/vim-floaterm")
 
+	-- highlight current word
+	use({ "RRethy/vim-illuminate" })
+
+	-- auto close and auto rename html tag
+	use({ "windwp/nvim-ts-autotag" })
+
 	-- Go language support for Vim
 	-- use { 'fatih/vim-go', run = ":GoUpdateBinaries" }
 
@@ -120,6 +126,7 @@ return packer.startup(function()
 	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-nvim-lua" })
+	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine

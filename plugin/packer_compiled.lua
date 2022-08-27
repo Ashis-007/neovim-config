@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
   ["cmp-nvim-lua"] = {
     loaded = true,
     path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
@@ -195,6 +200,11 @@ _G.packer_plugins = {
     path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
     path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
@@ -224,6 +234,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["vim-lastplace"] = {
     loaded = true,
