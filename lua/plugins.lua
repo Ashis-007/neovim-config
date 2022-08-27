@@ -42,7 +42,7 @@ packer.init({
 -- Only required if you have packer configured as `opt`
 vim.cmd([[packadd packer.nvim]])
 
-return packer.startup(function()
+return packer.startup(function(use)
   -- Packer can manage itself
   use("wbthomason/packer.nvim")
 
@@ -102,8 +102,10 @@ return packer.startup(function()
   use("kylechui/nvim-surround")
 
   -- enable git blame on lines
-  --[[ use("APZelos/blamer.nvim") ]]
   use('f-person/git-blame.nvim')
+
+  -- git diff views
+  use('sindrets/diffview.nvim')
 
   -- color highlighter
   use("norcalli/nvim-colorizer.lua")
@@ -116,6 +118,9 @@ return packer.startup(function()
 
   -- auto close and auto rename html tag
   use({ "windwp/nvim-ts-autotag" })
+
+  -- start up screen
+  use('goolord/alpha-nvim')
 
   -- Go language support for Vim
   -- use { 'fatih/vim-go', run = ":GoUpdateBinaries" }

@@ -7,6 +7,7 @@ require("plugs.gruvbox") -- theme
 require("theme") -- current theme
 
 require("plugs.nvim-treesitter")
+require("plugs.alpha")
 require("plugs.nvim-tree")
 require("plugs.lualine")
 require("plugs.bufferline")
