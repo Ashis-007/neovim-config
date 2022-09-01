@@ -39,6 +39,14 @@ keymap("n", "<M-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
+-- save buffer
+keymap("i", "<C-s>", ":w<CR>", opts)
+keymap("n", "<C-s>", ":w<CR>", opts)
+
+-- delete buffer
+keymap("i", "<C-w>", ":bd<CR>", opts)
+keymap("n", "<C-w>", ":bd<CR>", opts)
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

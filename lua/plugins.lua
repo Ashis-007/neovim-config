@@ -123,6 +123,9 @@ return packer.startup(function(use)
   -- start up screen
   use('goolord/alpha-nvim')
 
+  -- context on top
+  use 'nvim-treesitter/nvim-treesitter-context'
+
   -- Go language support for Vim
   -- use { 'fatih/vim-go', run = ":GoUpdateBinaries" }
 
