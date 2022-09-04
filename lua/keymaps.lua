@@ -44,8 +44,9 @@ keymap("i", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- delete buffer
-keymap("i", "<C-w>", ":bd<CR>", opts)
-keymap("n", "<C-w>", ":bd<CR>", opts)
+keymap("i", "<C-w>", ":bp|sp|bn|bd<CR>", opts)
+keymap("n", "<C-w>", ":bp|sp|bn|bd<CR>", opts)
+keymap("n", "<leader>bd", ":bp|sp|bn|bd<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode
