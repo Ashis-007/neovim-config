@@ -4,7 +4,7 @@ require("options") -- default options for vim
 
 -- plugins
 require("plugs.gruvbox") -- theme
-require("themes.onedark") -- current theme
+require("themes.gruvbox") -- current theme
 
 require("plugs.nvim-treesitter")
 require("plugs.alpha")
