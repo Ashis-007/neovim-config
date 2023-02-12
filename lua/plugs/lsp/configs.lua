@@ -5,7 +5,8 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "clangd", "cssls", "emmet_ls", "gopls", "html", "jsonls", "tsserver", "jdtls", "prismals", "pyright", "sqlls", "sumneko_lua", "yamlls" }
+local servers = { "clangd", "cssls", "emmet_ls", "gopls", "html", "jsonls", "tsserver", "jdtls", "prismals", "pyright",
+  "sqlls", "yamlls", "bashls", "dockerls", "graphql", "tailwindcss"}
 
 lsp_installer.setup({
   ensure_installed = servers,
@@ -15,7 +16,7 @@ for _, server in pairs(servers) do
   local opts = {
     on_attach = function(client, bufnr)
       require("plugs.lsp.handlers").on_attach(client, bufnr)
-      require 'illuminate'.on_attach(client)
+      -- require 'illuminate'.on_attach(client)
     end,
     capabilities = require("plugs.lsp.handlers").capabilities,
   }

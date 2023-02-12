@@ -19,7 +19,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins.lua source <afile>
   augroup end
 ]])
 
@@ -49,9 +49,15 @@ return packer.startup(function(use)
   -- Treesitter - language parser (for better syntax highlighting)
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
+  -- context on top
+  use 'nvim-treesitter/nvim-treesitter-context'
+
+  -- faster startup time
+  use 'lewis6991/impatient.nvim'
+
   -- Theme
-  use("eddyekofo94/gruvbox-flat.nvim")
-  use 'navarasu/onedark.nvim'
+  use { "ellisonleao/gruvbox.nvim" }
+  -- use 'navarasu/onedark.nvim'
 
   -- fzf - fuzzy finder
   use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
@@ -75,26 +81,27 @@ return packer.startup(function(use)
   use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 
   -- git decorations
-  use({
-    "lewis6991/gitsigns.nvim",
-    tag = "release", -- To use the latest release
-    config = function()
-      require("gitsigns").setup()
-    end,
-  })
+  -- use({
+  --   "lewis6991/gitsigns.nvim",
+  --   tag = "release", -- To use the latest release
+  --   config = function()
+  --     require("gitsigns").setup()
+  --   end,
+  -- })
 
   -- comment stuff
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
 
   -- Search stuff
-  use("justinmk/vim-sneak")
+  -- use("justinmk/vim-sneak")
+  -- use("easymotion/vim-easymotion")
 
   -- indent lines
   use "lukas-reineke/indent-blankline.nvim"
 
   -- Intelligently reopen files at your last edit position
-  use("farmergreg/vim-lastplace")
+  use 'ethanholz/nvim-lastplace'
 
   -- automatically add ending pairs
   use("windwp/nvim-autopairs")
@@ -103,31 +110,36 @@ return packer.startup(function(use)
   use("kylechui/nvim-surround")
 
   -- enable git blame on lines
-  use('f-person/git-blame.nvim')
+  -- use('f-person/git-blame.nvim')
 
   -- git diff views
   use('sindrets/diffview.nvim')
 
   -- color highlighter
-  use("norcalli/nvim-colorizer.lua")
+  -- use({"norcalli/nvim-colorizer.lua", config = require'colorizer'.setup()})
 
   -- terminal inside nvim
   use("voldikss/vim-floaterm")
 
   -- highlight current word
-  use({ "RRethy/vim-illuminate" })
+  -- use({ "RRethy/vim-illuminate" })
 
   -- auto close and auto rename html tag
   use({ "windwp/nvim-ts-autotag" })
 
-  -- start up screen
-  use('goolord/alpha-nvim')
 
-  -- context on top
-  use 'nvim-treesitter/nvim-treesitter-context'
+  -- notify alerts
+  -- use({ "rcarriga/nvim-notify" })
 
-  -- Go language support for Vim
-  -- use { 'fatih/vim-go', run = ":GoUpdateBinaries" }
+  -- TODO hightlights
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+      }
+    end
+  }
 
   -- cmp
   use({ "hrsh7th/nvim-cmp" }) -- The completion plugin

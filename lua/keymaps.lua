@@ -39,6 +39,16 @@ keymap("n", "<M-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "NzzzV")
+
+-- Select all text in buffer
+keymap("n", "<leader>a", "ggVG<C-o><C-o>", opts)
+
+-- Remap Y
+keymap("n", "Y", "y$")
+keymap("n", "Y", "y$")
+
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
@@ -62,12 +72,19 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
+-- greatest remap ever
+keymap("x", "<leader>p", "\"_dP")
+
+-- next greatest remap ever : asbjornHaland
+keymap({"n", "v"}, "<leader>y", "\"+y")
+keymap("n", "<leader>Y", "\"+Y", { noremap = false })
+
+keymap({"n", "v"}, "<leader>d", "\"_d")
+
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<M-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<M-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("v", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Remove search highlight until next search
 keymap("n", "<Esc><Esc>", ':let @/=""<CR>')
@@ -88,7 +105,7 @@ keymap("n", "<F8>", ":FloatermNew<CR>")
 keymap("n", "<F9>", ":FloatermPrev<CR>")
 keymap("n", "<F10>", ":FloatermNext<CR>")
 keymap("n", "<F12>", ":FloatermToggle<CR>")
-keymap("n", "<leader>g", ":FloatermNew --height=0.9 --width=0.95 lazygit<CR>")
+-- keymap("n", "<leader>g", ":FloatermNew --height=0.9 --width=0.95 lazygit<CR>")
 vim.cmd [[
     tnoremap <silent> <F8> <C-\><C-n>:FloatermNew<CR>
     tnoremap <silent> <F9> <C-\><C-n>:FloatermPrev<CR>

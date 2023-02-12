@@ -17,18 +17,19 @@ require("nvim-treesitter.configs").setup({
     "prisma",
     "proto",
     "python",
-    "r",
+    -- "r",
     "ruby",
     "regex",
-    "rust",
+    -- "rust",
     "scss",
-    "solidity",
+    -- "solidity",
     "sql",
     "toml",
     "tsx",
     "typescript",
     "vim",
     "yaml",
+    "help"
   },
   ignore_install = {}, -- List of parsers to ignore installing
   highlight = {

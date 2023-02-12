@@ -1,9 +1,10 @@
+require("impatient")
+
 require("keymaps") -- all the keymaps
 require("plugins") -- plugins setup i.e. packer
 require("options") -- default options for vim
 
 -- plugins
-require("plugs.gruvbox") -- theme
 require("themes.gruvbox") -- current theme
 
 require("plugs.nvim-treesitter")
@@ -19,6 +20,8 @@ require("plugs.indent-blankline")
 require("plugs.git-blame")
 require("plugs.comment")
 require("plugs.floaterm")
+require("plugs.nvim-lastplace")
+-- require("plugs.vim-illuminate")
 
 require("plugs.nvim-cmp")
 require("plugs.lsp")
