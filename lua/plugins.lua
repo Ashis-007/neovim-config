@@ -4,13 +4,13 @@ local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system({
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  })
+          "git",
+          "clone",
+          "--depth",
+          "1",
+          "https://github.com/wbthomason/packer.nvim",
+          install_path,
+      })
   print("Installing packer close and reopen Neovim...")
   vim.cmd([[packadd packer.nvim]])
 end
@@ -32,130 +32,131 @@ end
 
 -- Have packer use a popup window
 packer.init({
-  display = {
-    open_fn = function()
-      return require("packer.util").float({ border = "rounded" })
-    end,
-  },
+    display = {
+        open_fn = function()
+          return require("packer.util").float({ border = "rounded" })
+        end,
+    },
 })
 
 -- Only required if you have packer configured as `opt`
 vim.cmd([[packadd packer.nvim]])
 
 return packer.startup(function(use)
-  -- Packer can manage itself
-  use("wbthomason/packer.nvim")
+      -- Packer can manage itself
+      use("wbthomason/packer.nvim")
 
-  -- Treesitter - language parser (for better syntax highlighting)
-  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+      -- Treesitter - language parser (for better syntax highlighting)
+      use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
-  -- context on top
-  use 'nvim-treesitter/nvim-treesitter-context'
+      -- context on top
+      use 'nvim-treesitter/nvim-treesitter-context'
 
-  -- faster startup time
-  use 'lewis6991/impatient.nvim'
+      -- faster startup time
+      use 'lewis6991/impatient.nvim'
 
-  -- Theme
-  use { "ellisonleao/gruvbox.nvim" }
-  -- use 'navarasu/onedark.nvim'
+      -- Theme
+      use { "ellisonleao/gruvbox.nvim" }
+      -- use 'navarasu/onedark.nvim'
 
-  -- fzf - fuzzy finder
-  use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
-  use("junegunn/fzf.vim")
+      -- fzf - fuzzy finder
+      use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })
+      use("junegunn/fzf.vim")
 
-  -- Telescope - fuzzy finder and more
-  use({
-    "nvim-telescope/telescope.nvim",
-    tag = "0.1.x",
-    requires = { { "nvim-lua/plenary.nvim" } },
-  })
+      -- Telescope - fuzzy finder and more
+      use({
+          "nvim-telescope/telescope.nvim",
+          tag = "0.1.x",
+          requires = { { "nvim-lua/plenary.nvim" } },
+      })
 
-  -- nvim-tree
-  use("kyazdani42/nvim-web-devicons") -- icons
-  use("kyazdani42/nvim-tree.lua")
+      -- nvim-tree
+      use("kyazdani42/nvim-web-devicons") -- icons
+      use("kyazdani42/nvim-tree.lua")
 
-  -- Status line (Bottom)
-  use("nvim-lualine/lualine.nvim")
+      -- Status line (Bottom)
+      use("nvim-lualine/lualine.nvim")
 
-  -- Bufferline (Top)
-  use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
+      -- Bufferline (Top)
+      use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 
-  -- git decorations
-  -- use({
-  --   "lewis6991/gitsigns.nvim",
-  --   tag = "release", -- To use the latest release
-  --   config = function()
-  --     require("gitsigns").setup()
-  --   end,
-  -- })
+      -- git decorations
+      -- use({
+      --   "lewis6991/gitsigns.nvim",
+      --   tag = "release", -- To use the latest release
+      --   config = function()
+      --     require("gitsigns").setup()
+      --   end,
+      -- })
 
-  -- comment stuff
-  use("numToStr/Comment.nvim")
-  use("JoosepAlviste/nvim-ts-context-commentstring")
+      -- comment stuff
+      use("numToStr/Comment.nvim")
+      use("JoosepAlviste/nvim-ts-context-commentstring")
 
-  -- Search stuff
-  -- use("justinmk/vim-sneak")
-  -- use("easymotion/vim-easymotion")
+      -- Search stuff
+      -- use("justinmk/vim-sneak")
+      -- use("easymotion/vim-easymotion")
 
-  -- indent lines
-  use "lukas-reineke/indent-blankline.nvim"
+      -- indent lines
+      use "lukas-reineke/indent-blankline.nvim"
 
-  -- Intelligently reopen files at your last edit position
-  use 'ethanholz/nvim-lastplace'
+      -- Intelligently reopen files at your last edit position
+      use 'ethanholz/nvim-lastplace'
 
-  -- automatically add ending pairs
-  use("windwp/nvim-autopairs")
+      -- automatically add ending pairs
+      use("windwp/nvim-autopairs")
 
-  -- surround text with brackets
-  use("kylechui/nvim-surround")
+      -- surround text with brackets
+      use("kylechui/nvim-surround")
 
-  -- enable git blame on lines
-  -- use('f-person/git-blame.nvim')
+      -- enable git blame on lines
+      -- use('f-person/git-blame.nvim')
 
-  -- git diff views
-  use('sindrets/diffview.nvim')
+      -- git diff views
+      use('sindrets/diffview.nvim')
 
-  -- color highlighter
-  -- use({"norcalli/nvim-colorizer.lua", config = require'colorizer'.setup()})
+      -- color highlighter
+      -- use({"norcalli/nvim-colorizer.lua", config = require'colorizer'.setup()})
 
-  -- terminal inside nvim
-  use("voldikss/vim-floaterm")
+      -- terminal inside nvim
+      use("voldikss/vim-floaterm")
 
-  -- highlight current word
-  -- use({ "RRethy/vim-illuminate" })
+      -- highlight current word
+      -- use({ "RRethy/vim-illuminate" })
 
-  -- auto close and auto rename html tag
-  use({ "windwp/nvim-ts-autotag" })
+      -- auto close and auto rename html tag
+      use({ "windwp/nvim-ts-autotag" })
 
 
-  -- notify alerts
-  -- use({ "rcarriga/nvim-notify" })
+      -- notify alerts
+      -- use({ "rcarriga/nvim-notify" })
 
-  -- TODO hightlights
-  use {
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup {
+      -- TODO hightlights
+      use {
+          "folke/todo-comments.nvim",
+          requires = "nvim-lua/plenary.nvim",
+          config = function()
+            require("todo-comments").setup {
+            }
+          end
       }
-    end
-  }
 
-  -- cmp
-  use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
-  use({ "hrsh7th/cmp-buffer" }) -- buffer completions
-  use({ "hrsh7th/cmp-path" }) -- path completions
-  use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
-  use({ "hrsh7th/cmp-nvim-lsp" })
-  use({ "hrsh7th/cmp-nvim-lua" })
-  use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
+      -- cmp
+      use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
+      use({ "hrsh7th/cmp-buffer" }) -- buffer completions
+      use({ "hrsh7th/cmp-path" }) -- path completions
+      use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
+      use({ "hrsh7th/cmp-nvim-lsp" })
+      use({ "hrsh7th/cmp-nvim-lua" })
+      use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 
-  -- snippets
-  use({ "L3MON4D3/LuaSnip" }) --snippet engine
-  use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
+      -- snippets
+      use({ "L3MON4D3/LuaSnip" }) --snippet engine
+      use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
 
-  -- LSP
-  use({ "neovim/nvim-lspconfig" }) -- enable LSP
-  use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
-  use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
-end)
+      -- LSP
+      use({ "neovim/nvim-lspconfig" }) -- enable LSP
+      use { "williamboman/mason.nvim" }
+      use { "williamboman/mason-lspconfig.nvim" }
+      use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
+    end)
