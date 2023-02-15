@@ -9,7 +9,8 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
     debug = false,
     sources = {
-        formatting.prettier.with({ extra_args = {} }),
+        -- formatting.prettier.with({ extra_args = {} }),
+        formatting.prettierd,
         formatting.black.with({ extra_args = { "--fast" } }),
         formatting.buf,
         formatting.gofmt,

@@ -89,6 +89,8 @@ return packer.startup(function(use)
       --   end,
       -- })
 
+      use("tpope/vim-fugitive")
+
       -- comment stuff
       use("numToStr/Comment.nvim")
       use("JoosepAlviste/nvim-ts-context-commentstring")
