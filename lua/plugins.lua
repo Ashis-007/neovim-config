@@ -91,6 +91,8 @@ return packer.startup(function(use)
 
       use("tpope/vim-fugitive")
 
+      use("mbbill/undotree")
+
       -- comment stuff
       use("numToStr/Comment.nvim")
       use("JoosepAlviste/nvim-ts-context-commentstring")
@@ -128,7 +130,6 @@ return packer.startup(function(use)
 
       -- auto close and auto rename html tag
       use({ "windwp/nvim-ts-autotag" })
-
 
       -- notify alerts
       -- use({ "rcarriga/nvim-notify" })
