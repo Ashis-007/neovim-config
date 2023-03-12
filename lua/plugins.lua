@@ -71,8 +71,8 @@ return packer.startup(function(use)
       })
 
       -- nvim-tree
-      use("kyazdani42/nvim-web-devicons") -- icons
-      use("kyazdani42/nvim-tree.lua")
+      use("nvim-tree/nvim-web-devicons") -- icons
+      use("nvim-tree/nvim-tree.lua")
 
       -- Status line (Bottom)
       use("nvim-lualine/lualine.nvim")
@@ -120,7 +120,7 @@ return packer.startup(function(use)
       use('sindrets/diffview.nvim')
 
       -- color highlighter
-      -- use({"norcalli/nvim-colorizer.lua", config = require'colorizer'.setup()})
+      use({"norcalli/nvim-colorizer.lua"})
 
       -- terminal inside nvim
       use("voldikss/vim-floaterm")

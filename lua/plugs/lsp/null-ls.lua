@@ -11,13 +11,13 @@ null_ls.setup({
     sources = {
         -- formatting.prettier.with({ extra_args = {} }),
         formatting.prettierd,
-        formatting.black.with({ extra_args = { "--fast" } }),
+        formatting.black,
         formatting.buf,
         formatting.gofmt,
         formatting.goimports,
         formatting.nginx_beautifier,
         formatting.pg_format,
         formatting.sqlformat,
-        diagnostics.flake8,
+        -- diagnostics.flake8,
     },
 })

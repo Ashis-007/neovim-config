@@ -1,5 +1,5 @@
 local options = {
-  syntax = "on",
+  syntax = "off",
   errorbells = false,
   background = 'dark',
   number = true, -- set numbered lines
@@ -48,6 +48,10 @@ for k, v in pairs(options) do
 end
 
 vim.o.termguicolors = true
+
+-- disable netrw
+vim.g.loaded_netrw = 1;
+vim.g.loaded_netrwPlugin = 1;
 
 -- when pressing left/right cursor keys,
 -- Vim will move to the previous/next line after reaching first/last character in the line
