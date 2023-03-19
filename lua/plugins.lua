@@ -120,10 +120,16 @@ return packer.startup(function(use)
       use('sindrets/diffview.nvim')
 
       -- color highlighter
-      use({"norcalli/nvim-colorizer.lua"})
+      use({ "norcalli/nvim-colorizer.lua" })
 
       -- terminal inside nvim
       use("voldikss/vim-floaterm")
+
+      -- jump to place
+      use { "ggandor/leap.nvim", config = function()
+        require("leap").add_default_mappings(true)
+      end
+      }
 
       -- highlight current word
       -- use({ "RRethy/vim-illuminate" })
