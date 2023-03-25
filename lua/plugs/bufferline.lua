@@ -2,7 +2,7 @@ local bufferline = require("bufferline")
 
 bufferline.setup({
     options = {
-        numbers = "buffer_id",
+        numbers = "ordinal",
         close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
