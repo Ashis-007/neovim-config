@@ -46,6 +46,8 @@ return packer.startup(function(use)
       -- Packer can manage itself
       use("wbthomason/packer.nvim")
 
+      use 'ThePrimeagen/vim-be-good'
+
       -- Treesitter - language parser (for better syntax highlighting)
       use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
@@ -57,7 +59,7 @@ return packer.startup(function(use)
 
       -- Theme
       use { "ellisonleao/gruvbox.nvim" }
-      -- use 'navarasu/onedark.nvim'
+      use { 'rose-pine/neovim', as = 'rose-pine' }
 
       -- fzf - fuzzy finder
       use({ "junegunn/fzf", dir = "~/.fzf", run = "./install --all" })

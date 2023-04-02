@@ -5,7 +5,8 @@ require("plugins") -- plugins setup i.e. packer
 require("options") -- default options for vim
 
 -- plugins
-require("themes.gruvbox") -- current theme
+-- require("themes.gruvbox") -- current theme
+require("themes.rose-pine")
 
 require("plugs.nvim-treesitter")
 -- require("plugs.alpha")
