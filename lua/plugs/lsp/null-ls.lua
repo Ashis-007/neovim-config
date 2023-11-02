@@ -7,17 +7,16 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
-    debug = false,
-    sources = {
-        -- formatting.prettier.with({ extra_args = {} }),
-        formatting.prettierd,
-        formatting.black,
-        formatting.buf,
-        formatting.gofmt,
-        formatting.goimports,
-        formatting.nginx_beautifier,
-        formatting.pg_format,
-        formatting.sqlformat,
-        -- diagnostics.flake8,
-    },
+  debug = false,
+  sources = {
+    -- formatting.prettier.with({ extra_args = {} }),
+    formatting.prettierd,
+    formatting.black,
+    formatting.buf,
+    formatting.gofmt,
+    formatting.goimports,
+    formatting.nginx_beautifier,
+    formatting.pg_format,
+    -- diagnostics.flake8,
+  },
 })

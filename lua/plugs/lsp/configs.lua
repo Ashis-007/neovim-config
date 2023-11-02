@@ -7,20 +7,20 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "clangd", "cssls", "emmet_ls", "gopls", "html", "jsonls", "tsserver", "jdtls", "prismals", "pyright",
-    "sqlls", "yamlls", "bashls", "dockerls", "graphql", "tailwindcss", "lua_ls" }
+local servers = { "clangd", "cssls", "emmet_ls", "gopls", "html", "jsonls", "tsserver", "prismals", "pylsp",
+  "sqlls", "yamlls", "bashls", "dockerls", "lua_ls" }
 
 lsp_installer.setup({
-    ensure_installed = servers,
+  ensure_installed = servers,
 })
 
 for _, server in pairs(servers) do
   local opts = {
-      on_attach = function(client, bufnr)
-        require("plugs.lsp.handlers").on_attach(client, bufnr)
-        -- require 'illuminate'.on_attach(client)
-      end,
-      capabilities = require("plugs.lsp.handlers").capabilities,
+    on_attach = function(client, bufnr)
+      require("plugs.lsp.handlers").on_attach(client, bufnr)
+      -- require 'illuminate'.on_attach(client)
+    end,
+    capabilities = require("plugs.lsp.handlers").capabilities,
   }
   local has_custom_opts, server_custom_opts = pcall(require, "plugs.lsp.settings." .. server)
   if has_custom_opts then
